@@ -1,0 +1,9 @@
+<h1>Playlist de Spotify</h1>
+
+<form>
+    <div class="form-group">
+        <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic" class="form-control" placeholder="rechercher de la  Musique ...">
+    </div>
+</form>
+
+<div [ngModel]="useMusic"></div>
