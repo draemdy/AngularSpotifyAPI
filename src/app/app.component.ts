@@ -7,7 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   styleUrls: ['./app.component.styl']
 })
 export class AppComponent implements OnInit {
-  title = 'currency-converter';
+  title = 'Spotify List';
 
   ngOnInit(): void {
   }

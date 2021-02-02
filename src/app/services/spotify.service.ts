@@ -11,19 +11,19 @@ export class SpotifyService{
 
     constructor(private _http: HttpClient){}
 
-    searchMusic(str:string, type='artist'): Observable<SearchModule[]> {
-        this.searchUrl = 'https://api.spotify.com/v1/search?query='+str+'&offset=0&limit=20&type='+type+'&market=US';
-        return this._http.get<SearchModule[]>(this.searchUrl);
- //           .map(response => console.log(res));
-    }
+//     searchMusic(str:string, type='artist'): Observable<SearchModule[]> {
+//         this.searchUrl = 'https://api.spotify.com/v1/search?query='+str+'&offset=0&limit=20&type='+type+'&market=US';
+//         return this._http.get<SearchModule[]>(this.searchUrl);
+//  //           .map(response => console.log(res));
+//     }
 
-    // searchMusic(str:string, type='artist'){
-    //     let headers = new Headers({ 'Content-Type': 'application/json' },{'Authorization:'add_your_token_here'}); // ... Set content type to JSON
-    //     let options = new RequestOptions({ headers: headers }); // Create a request option
-    //     this.searchUrl = 'https://api.spotify.com/v1/search?query='+str+'&offset=0&limit=20&type='+type+'&market=US';
-    //     return this._http.get(this.searchUrl, options)
-    //         .map(res => res.json());
-    //     }
+    searchMusic(str:string, type='artist'){
+ //       let headers = new Headers({ 'Content-Type': 'application/json' },{'Authorization:'add_your_token_here'}); // ... Set content type to JSON
+ //       let options = new RequestOptions({ headers: headers }); // Create a request option
+        this.searchUrl = 'https://api.spotify.com/v1/search?query='+str+'&offset=0&limit=20&type='+type+'&market=US';
+        return this._http.get(this.searchUrl)
+            .map(res => res.json());
+        }
 
     // getProfile() {
     //   let headers = new Headers();

@@ -27,13 +27,9 @@ export class SearchComponent implements OnInit {
   searchMusic() {
     //console.log(event.target.value);
     this._spotifyService.searchMusic(this.searchStr);
-    // .subscribe(res => {
-    //   console.log({ name: res.name, artists: res.artists });
-    // })
+    .subscribe(res => {
+      console.log({ name: res.name, artists: res.artists.items });
+    })
   }
-
-  useMusic(){
-  }
-
 
 }
